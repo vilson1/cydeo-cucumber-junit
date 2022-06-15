@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+
 public class GoogleStepDefinitions {
     @When("user is on the Google search page")
     public void user_is_on_the_google_search_page() {
@@ -15,5 +16,6 @@ public class GoogleStepDefinitions {
         System.out.println("User is seeing title is Google");
         Assert.assertEquals(Driver.getDriver().getTitle(),"Google");
     }
+
 
 }
