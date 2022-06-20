@@ -4,8 +4,11 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -45,6 +48,31 @@ public class BrowserUtils {
 
     public static void verifyTitle( String expectedTitle){
         Assert.assertEquals(Driver.getDriver().getTitle(),expectedTitle);
+    }
+
+    /**
+     * this method will accept a string as expected value and verify if url contains it.
+     * @param expectedInTitle
+     */
+
+    public static void verifyTitleContains(String expectedInTitle){
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInTitle));
+
+    }
+
+    public static List<String> dropDownOptionsAsString(WebElement dropDownElement){
+
+
+        Select select=new Select(dropDownElement);
+        List<WebElement> actualOptionsAsWebElement= select.getOptions();
+
+        List<String> actualOptionsAsString=new ArrayList<>();
+        for (WebElement webElement : actualOptionsAsWebElement) {
+            actualOptionsAsString.add(webElement.getText());
+
+        }
+
+        return  actualOptionsAsString;
     }
 
 
