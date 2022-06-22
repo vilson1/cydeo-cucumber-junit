@@ -100,6 +100,7 @@ public class OrderStepDefinitions {
 
     @And("user enters quantity {int}")
     public void userEntersQuantity(int nr) {
+
         orderPage.inputQuantity.clear();
         orderPage.inputQuantity.sendKeys(nr+"");
     }

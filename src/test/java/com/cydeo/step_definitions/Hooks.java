@@ -16,7 +16,7 @@ In the class we will be able to pass pre- & post- conditions to
 
 public class Hooks {
     //import from io.cucumber.java not from junit
-    @Before
+    //@Before
     public void setUpScenario(){
         System.out.println("setting up browser using cucumber @Before");
 
@@ -36,12 +36,12 @@ public class Hooks {
         //System.out.println("take SS if scenario fails");
     }
 
-    @BeforeStep
+    //@BeforeStep
     public void setUpStep(){
         System.out.println("-----------Applayin BeforeStep");
     }
 
-    @AfterStep
+   // @AfterStep
     public void afterStep(){
         System.out.println("========== Aplyin after step");
     }
