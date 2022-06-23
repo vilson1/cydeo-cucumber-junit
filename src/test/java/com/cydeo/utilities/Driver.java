@@ -26,7 +26,7 @@ public class Driver {
          */
     public static WebDriver getDriver(){
 
-        if (driverPool==null){
+        if (driverPool.get()==null){
             /*
             We read our browserType from configuration.properties.
             This way, we can control which browser is opened from outside our code, from configuration.properties.
