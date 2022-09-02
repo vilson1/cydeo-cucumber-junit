@@ -56,10 +56,10 @@ public class Driver {
         return driverPool.get();
     }
 
-    public static void closeDriver(){
+  /*  public static void closeDriver(){
         if (driverPool!=null){
             driverPool.get().quit();
             driverPool.remove();
         }
-    }
+    }*/
 }
